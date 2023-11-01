@@ -223,7 +223,7 @@ class ParentReportShape extends StatelessWidget {
                         stream: collectionReference
                             .where('id', isEqualTo: babyID_)
                             .where('date_', isEqualTo: getCurrentDate())
-                            .where('photostatus_', isEqualTo: 'Forwarded')
+                            .where('photostatus_', isEqualTo: 'Approved')
                             .snapshots(),
                         builder: (context, snapshot) {
                           if (snapshot.hasError) {
@@ -234,7 +234,9 @@ class ParentReportShape extends StatelessWidget {
                             return Center(child: CircularProgressIndicator());
                           }
                           if (!snapshot.hasData || snapshot.data!.docs.isEmpty) {
-                            return Row(
+                            return
+                                   Image.asset('assets/dailycars.png', height: mQ.height*0.08);
+                            Row(
                               children:
                              [
                                Padding(
