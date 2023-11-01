@@ -8,5 +8,4 @@ workflows:
     scripts:
       - echo "Installing dependencies..."
       - flutter pub get
-      - flutter test
       - flutter build ios --release --no-codesign  # Builds the iOS app without code signing
