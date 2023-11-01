@@ -14,8 +14,6 @@ import '../kids/widgets/empty_background.dart';
 import '../reminder/reminderstoparent.dart';
 import '../widgets/base_drawer.dart';
 
-int _cartBadgeAmount = 0;
-late bool _showCartBadge;
 Color color = Colors.red;
 class ParentHomeScreen extends StatefulWidget {
   ParentHomeScreen({super.key});
@@ -306,13 +304,7 @@ class _ParentHomeScreenState extends State<ParentHomeScreen> {
             }
 
             if (!snapshot.hasData || snapshot.data!.docs.isEmpty) {
-              _showCartBadge = false;
             }
-// setState(() {
-            _cartBadgeAmount=
-                snapshot.data!.docs.length;
-            _showCartBadge = (snapshot.data!.docs.length > 0);
-// });
             return
               badges.Badge(
                 position: badges.BadgePosition.topEnd(top: 1, end: 0),

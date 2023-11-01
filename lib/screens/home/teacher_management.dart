@@ -1,7 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:confirm_dialog/confirm_dialog.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:kids_republik/screens/widgets/base_drawer.dart';
 import 'package:kids_republik/utils/const.dart';
@@ -29,7 +28,7 @@ class _TeacherManagementScreenState extends State<TeacherManagementScreen> {
     final mQ = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: Colors.blue[50],
-      drawer: BaseDrawer(),
+      // drawer: BaseDrawer(),
       appBar: AppBar(
         iconTheme: IconThemeData(color: kWhite),
         title: Text(

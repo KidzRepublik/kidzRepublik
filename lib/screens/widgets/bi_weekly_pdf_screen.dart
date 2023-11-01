@@ -40,7 +40,6 @@ class BiWeeklyReportShapePDFPreviewPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final mQ = MediaQuery.of(context).size;
-    var condition;
     DateTime now = DateTime.now();
     DateTime currentDate = DateTime.now();
     DateTime fifteenDaysAgo = currentDate.subtract(Duration(days: 15));
@@ -57,13 +56,6 @@ class BiWeeklyReportShapePDFPreviewPage extends StatelessWidget {
       startDate = DateTime(now.year, now.month, 16);
       endDate = DateTime(now.year, now.month, 31);
     }
-    condition = collectionReference
-        .where('category_', isEqualTo: 'BiWeekly')
-        // .where('id', isEqualTo: babyID_)
-        // .where('date_', isGreaterThanOrEqualTo: DateFormat('dd-MM-yyyy').format(startDate), isLessThanOrEqualTo: DateFormat('dd-MM-yyyy').format(endDate))
-    // .where('date_', isGreaterThanOrEqualTo: DateFormat('dd-MM-yyyy').format(fifteenDaysAgo), isLessThanOrEqualTo: DateFormat('dd-MM-yyyy').format(currentDate))
-    //     .where('biweeklystatus_', isEqualTo: 'Approved')
-    ;
 
     return Scaffold(
       appBar: AppBar(

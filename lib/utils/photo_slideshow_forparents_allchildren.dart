@@ -29,7 +29,6 @@ class _SlideshowScreenState extends State<SlideshowScreen> {
           .get();
 
       if (babySnapshot.docs.isNotEmpty) {
-        final babyId = babySnapshot.docs.first.id;
         final activitySnapshot = await FirebaseFirestore.instance
             .collection('Activity')
             .where('id', whereIn: babySnapshot.docs)

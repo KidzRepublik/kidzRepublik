@@ -32,7 +32,7 @@ class _UserManagementScreenState extends State<UserManagementScreen> {
 
     return Scaffold(
       backgroundColor: Colors.blue[50],
-      drawer: BaseDrawer(),
+      // drawer: BaseDrawer(),
       appBar: AppBar(
         iconTheme: IconThemeData(color: kWhite),
         title: Text(

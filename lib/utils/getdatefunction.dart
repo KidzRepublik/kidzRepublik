@@ -20,10 +20,6 @@ String getCurrentDateforattendance() {
   final now = DateTime.now();
   final day = ' ${DateFormat.EEEE().format(DateTime.now())},  ${DateFormat.d().format(DateTime.now())} ${DateFormat.MMMM().format(DateTime.now())} ${DateFormat.y().format(DateTime.now())} ';
   now.day.toString().padLeft(2, '0'); // Add leading zero if needed
-  final month =
-  now.month.toString().padLeft(2, '0'); // Add leading zero if needed
-  final year = now.year.toString();
-
   isloadingDate = false;
 
   return '$day';

@@ -317,7 +317,7 @@ CarouselSlider(
           .get();
 
       if (activitySnapshot.docs.isNotEmpty) {
-        return activitySnapshot.docs.map((doc) => doc.data() as Map<String, dynamic>).toList();
+        return activitySnapshot.docs.map((doc) => doc.data()).toList();
       } else {
         return null;
       }
@@ -335,7 +335,7 @@ CarouselSlider(
           .get();
 
       if (activitySnapshot.docs.isNotEmpty) {
-        return activitySnapshot.docs.map((doc) => doc.data() as Map<String, dynamic>).toList();
+        return activitySnapshot.docs.map((doc) => doc.data()).toList();
       } else {
         return null;
       }

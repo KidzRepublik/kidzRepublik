@@ -20,8 +20,6 @@ class ManagerReportSelectChild extends StatefulWidget {
   @override
   State<ManagerReportSelectChild> createState() => _ManagerReportSelectChildState();
 }
-int _cartBadgeAmount = 0;
-late bool _showCartBadge;
 Color color = Colors.red;
 
 class _ManagerReportSelectChildState extends State<ManagerReportSelectChild> {
@@ -54,7 +52,7 @@ class _ManagerReportSelectChildState extends State<ManagerReportSelectChild> {
 
     final mQ = MediaQuery.of(context).size;
     return Scaffold(
-        drawer: BaseDrawer(),
+        // drawer: BaseDrawer(),
         appBar: AppBar(
           iconTheme: IconThemeData(color: kWhite),
           title: Text(
@@ -254,7 +252,6 @@ classwisestudents('Kinder Garten - II')
             }
 
             if (!snapshot.hasData || snapshot.data!.docs.isEmpty) {
-              _showCartBadge = false;
             }
 
             return

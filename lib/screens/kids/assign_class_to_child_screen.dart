@@ -2,7 +2,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:confirm_dialog/confirm_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:kids_republik/screens/kids/registration_form.dart';
 import 'package:kids_republik/screens/kids/update_registration_form.dart';
 import '../../main.dart';

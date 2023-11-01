@@ -144,8 +144,6 @@ class _RegistrationFormState extends State<RegistrationForm> {
                             CustomTextField(controller: registrationFormController.childFullName, inputType: TextInputType.text, labelText: "Full name of child", validators: (String? value) {if (value!.isEmpty) {return 'Required';}return null;},),
                             CustomTextField(controller: registrationFormController.nameUsuallyKnownBy, inputType: TextInputType.text, labelText: "Name usually known by", validators: (String? value) {if (value!.isEmpty) {return 'Required';}return null;},),
                             Row(crossAxisAlignment: CrossAxisAlignment.center,mainAxisAlignment: MainAxisAlignment.center,children:[
-                              // registrationFormController.selectDate("Admission Date",context),
-                              // (registrationFormController.datechanged)? Text('${registrationFormController.getCurrentDate()}') : Text('${registrationFormController.newdate}') ,
                               Expanded(child: TextButton(onPressed: () async { registrationFormController.datechanged = !registrationFormController.datechanged;    DateTime today_ = DateTime.now();    final DateTime? picked = await showDatePicker(context: context,initialDate: today_??DateTime.now(),firstDate: DateTime(2000),lastDate: DateTime(today_.year, today_.month,today_.day),);today_ = picked!;final day =today_.day.toString().padLeft(2, '0');final month = today_.month.toString().padLeft(2, '0');final year = today_.year.toString();registrationFormController.dateofBirth.value = '$day/$month/$year';}, child: (registrationFormController.datechanged)? Text('Date of Birth ${registrationFormController.dateofBirth}', style: TextStyle(fontWeight: FontWeight.normal,color: Colors.black)) :Text('Date of Birth ${registrationFormController.dateofBirth}', style: TextStyle(fontWeight: FontWeight.normal,color: Colors.black)),)) ,
                               Expanded(child: buildDropdownButton('Gender',['Boy', 'Girl'],'Boy'),)
                             ]),
@@ -577,7 +575,6 @@ bool isChecked = true;
     uploadTask.snapshotEvents.listen((TaskSnapshot taskSnapshot) {
       switch (taskSnapshot.state) {
         case TaskState.running:
-          var progress =
               100.0 * (taskSnapshot.bytesTransferred / taskSnapshot.totalBytes);
           break;
         case TaskState.paused:
