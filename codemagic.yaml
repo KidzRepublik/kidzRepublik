@@ -1,0 +1,12 @@
+workflows:
+  flutter_workflow:
+    name: "Build and Test"
+    environment:
+      vars:
+        FLUTTER_CHANNEL: "stable"
+        FLUTTER_VERSION: "2.5.3"  # adjust to your desired Flutter version
+    scripts:
+      - echo "Installing dependencies..."
+      - flutter pub get
+      - flutter test
+      - flutter build ios --release --no-codesign  # Builds the iOS app without code signing
